@@ -1,0 +1,257 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.header img {
+    max-width: 300px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.ride-details-header h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #555;
+    font-weight: lighter;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ride-details-header hr {
+    margin: 0px 42%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+    height: 60px;
+    margin: 1px 100px;
+}
+
+.nav-left .nav-link {
+    display: inline;
+    text-decoration: none;
+    font-size: 25px;
+    color: #555;
+    font-weight: 700;
+    padding: 26px 30px;
+    height: 100%;
+}
+
+.nav-right {
+    padding: 0px 20px;
+}
+
+.nav-link.active {
+    background-color: #4285F4;
+    color: white;
+}
+
+.search-input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px 30px;
+    margin: 10px 40px;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    margin: -12px 5px;
+}
+
+footer,
+nav {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.user-profile {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 75px;
+    border: 1px solid #555;
+    border-radius: 40px;
+}
+
+.ride-details-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 630px;
+    margin: auto auto;
+}
+
+.departure-arrive-wrapper {
+    display: flex;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.departure-arrive-information {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    padding: 0px 60px;
+}
+
+.departure-arrive-information span {
+    color: #555;
+}
+
+.user-profile h3 {
+    font-size: 13px;
+}
+
+.form-group-days>div {
+    padding-bottom: 10px;
+}
+
+.form-group-days>div>label {
+    padding: 0px 19px;
+}
+
+.form-group-inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group-inline>div {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 73px;
+}
+
+.form-group-inline>div>select {
+    padding: 7px;
+    width: 140px;
+    max-width: 200px;
+}
+
+.form-group-inline>div>input {
+    padding: 7px;
+    width: 80px;
+    max-width: 100px;
+}
+
+.vehicle-details-title {
+    margin-bottom: 5px;
+    margin-right: 83%;
+    margin-top: 50px;
+}
+
+.vehicle-details {
+    display: flex;
+    border: 1px solid #555;
+    padding: 50px 1px;
+    justify-content: space-between;
+}
+
+.vehicle-details>div {
+    display: flex;
+    gap: 2%;
+    max-width: 240px;
+    padding: 1px 35px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0px;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.form-actions>button {
+    border: 1px solid #555;
+    padding: 10px 80px;
+    background-color: #4285F4;
+    color: white;
+}
+
+.form-actions>a {
+    color: #4285F4;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-menu input[type="checkbox"] {
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+    top: 50px;
+}
+
+.dropdown-menu a {
+    color: #555;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.submenu-logout {
+    border-top: 1px solid black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f3f3f3;
+}
+
+.user-menu input[type="checkbox"]:checked+.dropdown-menu {
+    display: block;
+}

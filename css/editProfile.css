@@ -1,0 +1,166 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.header img {
+    max-width: 300px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.form-title h2 {
+    font-size: 40px;
+    color: #555;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+}
+
+.form-title hr {
+    margin: 0px 43%;
+    margin-bottom: 4%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+    height: 60px;
+    margin: 1px 100px;
+}
+
+.nav-left .nav-link {
+    display: inline;
+    text-decoration: none;
+    font-size: 25px;
+    color: #555;
+    font-weight: 700;
+    padding: 26px 30px;
+    height: 100%;
+}
+
+.nav-right {
+    padding: 0px 20px;
+}
+
+.nav-link.active {
+    background-color: #4285F4;
+    color: white;
+}
+
+.search-input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px 30px;
+    margin: 10px 40px;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    margin: -12px 5px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 565px;
+    margin: 0px auto;
+}
+
+.column-form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column-form>div>select {
+    padding: 10px;
+    width: 270px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.horizontal-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 563px;
+}
+
+#address,
+#email {
+    width: 100%;
+    max-width: 540px;
+}
+
+.column-form>div,
+.horizontal-form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 1px;
+}
+
+.form-actions>button {
+    border: 1px solid #555;
+    padding: 10px 80px;
+    background-color: #4285F4;
+    color: white;
+}
+
+.form-actions>a {
+    color: #4285F4;
+}
+
+footer,
+nav {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}

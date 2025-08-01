@@ -1,0 +1,138 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 3% 1px;
+  margin-bottom: 6%;
+}
+
+.form h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 3.5em;
+  font-weight: lighter;
+  color: #444;
+  margin: -0px 1px;
+}
+
+.registration-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: -20px auto;
+  margin-top: 40px;
+}
+
+.column-form {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.column-form>div>select {
+  padding: 10px;
+  width: 270px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.horizontal-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 120px;
+}
+
+#address,
+#email {
+  width: 100%;
+  max-width: 540px;
+}
+
+.column-form>div,
+.horizontal-form>div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.cta-buttons-relinks {
+  margin: 1% auto;
+  text-align: center;
+}
+
+.cta-buttons-relinks p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  align-items: center;
+  display: inline-block;
+  padding: 20px;
+}
+
+.cta-buttons-sign-up a,
+.cta-buttons-relinks a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cta-buttons-sign-up a:hover {
+  text-decoration: underline;
+}
+
+.cta-buttons-sign-up {
+  margin: 3% auto;
+  text-align: center;
+}
+
+.cta-buttons-sign-up a {
+  background-color: #444;
+  color: white;
+  padding: 10px 50px;
+  text-decoration: none;
+}
+
+footer,
+nav {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.9rem;
+  color: gray;
+  padding: 1% 0px;
+}
+
+nav a {
+  margin: 0px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.form>hr {
+  margin: 0px 40%;
+}

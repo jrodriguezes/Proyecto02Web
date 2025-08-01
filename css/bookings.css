@@ -1,0 +1,176 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.header img {
+    max-width: 300px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.search-input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px 30px;
+    margin: 10px 40px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+    height: 60px;
+    margin: 1px 100px;
+}
+
+.nav-left .nav-link {
+    display: inline;
+    text-decoration: none;
+    font-size: 25px;
+    color: #555;
+    font-weight: 700;
+    padding: 26px 30px;
+    height: 100%;
+}
+
+.nav-right {
+    padding: 0px 20px;
+}
+
+.nav-link.active {
+    background-color: #4285F4;
+    color: white;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    margin: -12px 5px;
+}
+
+footer,
+nav {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.bookings-section {
+    height: 77%;
+    font-family: Arial, sans-serif;
+}
+
+.booking-header h2 {
+    font-size: 40px;
+    color: #555;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+}
+
+.booking-header hr {
+    margin: 0px 42%;
+    margin-bottom: 4%;
+}
+
+.bookings-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.bookings-table th {
+    background-color: #bbb9b9;
+}
+
+.bookings-table th,
+.bookings-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.bookings-table a {
+    color: #4285F4;
+}
+
+.foto-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.foto-perfil img {
+    max-width: 50px;
+    padding-right: 10px;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-menu input[type="checkbox"] {
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+    top: 50px;
+}
+
+.dropdown-menu a {
+    color: #555;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.submenu-logout {
+    border-top: 1px solid black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f3f3f3;
+}
+
+.user-menu input[type="checkbox"]:checked+.dropdown-menu {
+    display: block;
+}

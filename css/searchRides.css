@@ -1,0 +1,186 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.header img {
+    max-width: 300px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.rides-header h2 {
+    font-size: 40px;
+    color: #555;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+}
+
+.rides-header hr {
+    margin: 0px 42%;
+    margin-bottom: 2%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+    height: 60px;
+    margin: 1px 100px;
+}
+
+.nav-left .nav-link {
+    display: inline;
+    text-decoration: none;
+    font-size: 25px;
+    color: #555;
+    font-weight: 700;
+    padding: 26px 30px;
+    height: 100%;
+}
+
+.nav-right {
+    padding: 0px 20px;
+}
+
+.nav-link.active {
+    background-color: #4285F4;
+    color: white;
+}
+
+.search-input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px 30px;
+    margin: 10px 40px;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    margin: -12px 5px;
+}
+
+.rides-section {
+    height: 77%;
+    font-family: Arial, sans-serif;
+}
+
+.rides-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+.rides-table th,
+.rides-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.rides-table a {
+    color: #4285F4;
+}
+
+footer,
+nav {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.rides-finder {
+    border: 1px solid #555;
+    padding: 2% 4%;
+    margin: 1% 5%;
+}
+
+.departure-arrive-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.departure-arrive-information {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.departure-arrive-information>select {
+    padding: 7px 15px;
+}
+
+.form-group-days {
+    display: flex;
+}
+
+.form-group-days>div>label {
+    padding: 25px;
+}
+
+.search-rides-section>span {
+    margin: auto 5%;
+}
+
+.search-rides-section>span>span {
+    font-weight: bold;
+}
+
+.foto-perfil {
+    display: flex;
+    align-items: center;
+}
+
+.foto-perfil img {
+    max-width: 50px;
+    padding-right: 10px;
+}
+
+.map-image {
+    margin: 1% 5%;
+}
+
+.map-image>img {
+    width: 100%;
+}
+
+.find-rides-btn {
+    color: white;
+    background-color: #4285F4;
+    padding: 10px 30px;
+    border: 1px solid #555;
+    border-radius: 4px;
+
+    white-space: nowrap
+}

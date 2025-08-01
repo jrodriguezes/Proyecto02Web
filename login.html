@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVENTONES</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="box-shadow-main">
+        <header class="header">
+          <img src="img/AventonesLogo.png" alt="Logo" />
+        </header>
+
+        <section class="login-form">
+          <button class="cta-google">
+            <img
+              class="img-google"
+              src="https://developers.google.com/identity/images/g-logo.png"
+              alt="logo-google"
+            />
+            <span>Sign in with Google</span>
+          </button>
+          <p class="or">Or</p>
+          <div class="user-creedentials">
+            <label for="username">Username</label>
+            <input type="text" id="username" />
+
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" value="1234567890" />
+            <p>Not an user? <a href="register.html">Register Now</a></p>
+          </div>
+
+          <div class="cta-button">
+            <button onclick="window.location.href='myRides.html'">Login</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <hr />
+    <nav>
+      <a href="searchRides.html">Home</a> | <a href="myRides.html">Rides</a> |
+      <a href="bookings.html">Bookings</a> |
+      <a href="editProfile.html">Settings</a> | <a href="login.html">Login</a> |
+      <a href="register.html">Register</a>
+    </nav>
+    <footer class="footer">© Aventones.com</footer>
+  </body>
+</html>

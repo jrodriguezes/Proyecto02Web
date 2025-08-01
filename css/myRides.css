@@ -1,0 +1,137 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.header img {
+    max-width: 300px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+    height: 60px;
+    margin: 1px 100px;
+}
+
+.nav-left .nav-link {
+    display: inline;
+    text-decoration: none;
+    font-size: 25px;
+    color: #555;
+    font-weight: 700;
+    padding: 26px 30px;
+    height: 100%;
+}
+
+.nav-right {
+    padding: 0px 20px;
+}
+
+.nav-link.active {
+    background-color: #4285F4;
+    color: white;
+}
+
+.search-input {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 10px 30px;
+    margin: 10px 40px;
+}
+
+.user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    margin: -12px 5px;
+}
+
+.rides-section {
+    height: 77%;
+    font-family: Arial, sans-serif;
+}
+
+.rides-header h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #555;
+    font-weight: lighter;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rides-header hr {
+    margin: 0px 44%;
+}
+
+.box-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.new-ride-button {
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px 0px;
+    border: 1px solid #555;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.rides-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.rides-table th,
+.rides-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.rides-table a {
+    color: #4285F4;
+}
+
+footer,
+nav {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}

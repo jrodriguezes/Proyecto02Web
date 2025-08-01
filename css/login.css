@@ -1,0 +1,112 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.header img {
+    max-width: 300px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.box-shadow-main {
+    border: 2px solid #4285F4;
+    width: 40%;
+    background: #fff;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-google {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #4285F4;
+    font-family: Roboto, sans-serif;
+    border: 1px solid #dadce0;
+    font-size: 14px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.img-google {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.or {
+    font-weight: bold;
+}
+
+.user-creedentials,
+.cta-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.user-creedentials a {
+    color: #4285F4;
+}
+
+.cta-button button {
+    color: white;
+    background: #4285F4;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+#username,
+#login-password {
+    width: 260px;
+    max-width: 540px;
+    height: 30px;
+}
+
+footer,
+nav {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.cta-button button:hover {
+    cursor: pointer;
+}
