@@ -33,7 +33,6 @@ body {
     width: 40%;
     background: #fff;
     padding: 20px;
-    padding-bottom: 50px;
 }
 
 .login-form {
@@ -109,4 +108,42 @@ nav a {
 
 .cta-button button:hover {
     cursor: pointer;
+}
+
+@media only screen and (min-width: 390px) and (max-width: 1023px) and (min-height: 844px) and (max-height: 1365px) {
+    .box-shadow-main {
+        width: 80%;
+    }
+
+    footer,
+    nav {
+        margin-top: auto;
+        text-align: center;
+        font-size: 0.9rem;
+        color: gray;
+        padding: 5px 20px;
+    }
+
+    nav a {
+        margin: 0px 2px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .page-container {
+        height: 90%;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
+    .page-container {
+        height: 88%;
+    }
+
+}
+
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {
+    .page-container {
+        height: 84%;
+    }
 }
