@@ -26,7 +26,7 @@ body {
   font-size: 3.5em;
   font-weight: lighter;
   color: #444;
-  margin: -0px 1px;
+  margin: 0px 1px;
 }
 
 .registration-body {
@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   gap: 20px;
   max-width: 800px;
-  margin: -20px auto;
+  margin: 0px auto;
   margin-top: 40px;
 }
 
@@ -55,7 +55,7 @@ body {
 .horizontal-form {
   display: flex;
   flex-direction: column;
-  margin: 0 120px;
+  margin: 0px 120px;
 }
 
 #address,
@@ -136,3 +136,45 @@ nav a {
 .form>hr {
   margin: 0px 40%;
 }
+
+@media only screen and (min-width: 390px) and (max-width: 1023px) and (min-height: 844px) and (max-height: 1365px) {
+  .form h2 {
+    font-size: 2.5em;
+  }
+
+  .form h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .column-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column-form>div,
+  .horizontal-form>div {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .horizontal-form {
+    margin: 0 auto;
+    width: 100%;
+        align-items: center;
+  }
+
+  input,
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .registration-body {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {}
+
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {}
