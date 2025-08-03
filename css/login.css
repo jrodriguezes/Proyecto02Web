@@ -137,13 +137,13 @@ nav a {
 
 @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
     .page-container {
-        height: 88%;
+        height: 93%;
     }
 
 }
 
 @media only screen and (min-width: 1650px) and (min-height: 1050px) {
     .page-container {
-        height: 84%;
+        height: 92%;
     }
 }
