@@ -152,16 +152,16 @@ nav a {
     align-items: center;
   }
 
+  .horizontal-form {
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+  }
+
   .column-form>div,
   .horizontal-form>div {
     width: 100%;
     max-width: 90%;
-  }
-
-  .horizontal-form {
-    margin: 0 auto;
-    width: 100%;
-        align-items: center;
   }
 
   input,
@@ -173,8 +173,34 @@ nav a {
   .registration-body {
     padding: 0 10px;
   }
+
+  footer,
+  nav {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    padding: 5px 20px;
+  }
+
+  nav a {
+    margin: 0px 2px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .cta-buttons-relinks>p {
+    padding: 5px;
+  }
+
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {}
+@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
+
+
+  .page-container {
+    height: 93%;
+  }
+}
 
 @media only screen and (min-width: 1650px) and (min-height: 1050px) {}
