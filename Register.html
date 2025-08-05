@@ -12,7 +12,7 @@
         <img src="img/AventonesLogo.png" alt="Logo" />
       </header>
 
-      <section class="form">
+      <form class="registration-form" id="registration-form">
         <h2>User Registration</h2>
         <hr />
         <div class="registration-body">
@@ -37,11 +37,11 @@
           <div class="column-form">
             <div>
               <label for="register-password">Password</label>
-              <input type="text" id="register-password" />
+              <input type="password" id="register-password" />
             </div>
             <div>
               <label for="repeat-password">Repeat Password</label>
-              <input type="text" id="repeat-password" />
+              <input type="password" id="repeat-password" />
             </div>
           </div>
 
@@ -77,17 +77,16 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="cta-buttons">
-        <div class="cta-buttons-relinks">
-          <p>Already an user? <a href="login.html">Login here</a></p>
-          <p>Register as driver? <a href="">Click here</a></p>
-        </div>
-        <div class="cta-buttons-sign-up">
-          <a href="login.html">Sign up</a>
-        </div>
-      </section>
+        <section class="cta-buttons">
+          <div class="cta-buttons-relinks">
+            <p>Already an user? <a href="login.html">Login here</a></p>
+            <p>Register as driver? <a href="">Click here</a></p>
+          </div>
+          <div class="cta-buttons-sign-up">
+            <button type="submit">Sign up</button>
+          </div>
+        </section>
+      </form>
     </div>
     <hr />
     <nav>
@@ -98,5 +97,7 @@
     </nav>
 
     <footer>© Aventones.com</footer>
+
+    <script src="js/register.js"></script>
   </body>
 </html>
