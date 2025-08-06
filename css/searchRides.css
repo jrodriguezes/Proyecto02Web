@@ -163,8 +163,12 @@ nav a {
 }
 
 .foto-perfil img {
-    max-width: 50px;
-    padding-right: 10px;
+    max-width: 40px;
+    align-items: center;
+}
+
+.foto-perfil>div {
+    margin: auto 3px;
 }
 
 .map-image {
@@ -181,7 +185,6 @@ nav a {
     padding: 10px 30px;
     border: 1px solid #555;
     border-radius: 4px;
-
     white-space: nowrap
 }
 
@@ -193,7 +196,7 @@ nav a {
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
-        /* ← Impide que se baje a la siguiente línea */
+        /* Impide que se baje a la siguiente línea */
         height: 10px;
     }
 
@@ -244,4 +247,101 @@ nav a {
         text-decoration: none;
         color: black;
     }
+
+    .rides-finder {
+        padding: 2% 1%;
+        margin: 1% 1%;
+    }
+
+    .departure-arrive-information {
+        gap: 4px;
+    }
+
+    .departure-arrive-information>select {
+        padding: 3px 4px;
+    }
+
+    .form-group-days>div>label {
+        padding: 0px;
+    }
+
+    .form-group-days {
+        margin: auto 15px;
+    }
+
+    .departure-arrive-wrapper {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .find-rides-btn {
+        padding: 20px 50px;
+        margin: 5px 10px;
+    }
+
+    .rides-table th,
+    .rides-table td {
+        padding: 4px 1px;
+        font-size: 14px;
+    }
+
+    .foto-perfil {
+        display: block;
+        align-items: center;
+        margin: auto auto;
+        width: 100%;
+    }
+
+    .foto-perfil>div {
+        display: flex;
+        margin: 6px 0px;
+        padding: 0px 0px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto-perfil>div>img {
+        max-width: 25px;
+        width: 25px;
+        align-items: center;
+        margin: auto auto;
+    }
+
+    .foto-perfil>div>p {
+        align-items: center;
+        margin: 0px auto;
+    }
+
+    .map-image {
+        margin: 1% 2%;
+        height: 150px;
+    }
+
+    .map-image>img {
+        height: 150px;
+    }
+
+    .search-rides-section {
+        height: 78%;
+    }
+
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
+    .search-rides-section {
+        height: 79%;
+    }
+
+    .map-image {
+        margin: 1% 5%;
+        height: 600px;
+    }
+
+    .map-image>img {
+        height: 570px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {}
