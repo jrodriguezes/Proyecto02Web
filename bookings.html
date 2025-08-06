@@ -11,12 +11,8 @@
       <img src="img/AventonesLogo.png" alt="Logo" />
     </header>
     <nav>
-      <div>
-
-      </div>
-      <div>
-        
-      </div>
+      <div></div>
+      <div></div>
     </nav>
     <section class="navbar">
       <div class="nav-left">
@@ -33,7 +29,7 @@
           </label>
           <input type="checkbox" id="toggle-menu" />
           <div class="dropdown-menu">
-            <a href="#" class="submenu-logout">Logout</a>
+            <a onclick="logout()" id="submenu-logout">Logout</a>
             <a href="editProfile.html">Settings</a>
           </div>
         </div>
@@ -82,5 +78,6 @@
       <a href="userRegister.html">Register</a>
     </nav>
     <footer class="footer">© Aventones.com</footer>
+    <script src="js/sessionGuard.js"></script>
   </body>
 </html>
