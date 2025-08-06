@@ -16,6 +16,12 @@
         <h2>User Registration</h2>
         <hr />
         <div class="registration-body">
+          <div class="horizontal-form">
+            <div>
+              <label for="user-id">Id</label>
+              <input type="text" id="user-id" />
+            </div>
+          </div>
           <div class="column-form">
             <div>
               <label for="first-name">First Name</label>
@@ -65,6 +71,12 @@
               <input type="text" id="state" />
             </div>
           </div>
+          <div class="horizontal-form">
+            <div>
+              <label for="birthdate">Birthdate</label>
+              <input type="date" id="birthdate" />
+            </div>
+          </div>
 
           <div class="column-form">
             <div>
@@ -74,6 +86,39 @@
             <div>
               <label for="phone-number">Phone Number</label>
               <input type="text" id="phone-number" />
+            </div>
+          </div>
+          <div class="column-form">
+            <div>
+              <label for="vehicle-brand">Vehicle brand</label>
+              <input type="text" id="vehicle-brand" />
+            </div>
+            <div>
+              <label for="vehicle-model">Vehicle model</label>
+              <input type="text" id="vehicle-model" />
+            </div>
+          </div>
+          <div class="column-form">
+            <div>
+              <label for="customRange4" class="form-label">Car year</label>
+              <input
+                type="range"
+                class="form-range"
+                min="1970"
+                max="2025"
+                value="2000"
+                id="customRange4"
+              />
+              <output
+                for="customRange4"
+                id="rangeValue"
+                aria-hidden="true"
+              ></output>
+            </div>
+
+            <div>
+              <label for="plate-number">Plate number</label>
+              <input type="text" id="plate-number" />
             </div>
           </div>
         </div>
@@ -99,5 +144,6 @@
     <footer>© Aventones.com</footer>
 
     <script src="js/register.js"></script>
+    <script src="js/rangeBoostrap.js"></script>
   </body>
 </html>
