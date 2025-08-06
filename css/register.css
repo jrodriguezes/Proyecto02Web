@@ -59,7 +59,9 @@ body {
 }
 
 #address,
-#email {
+#email,
+#user-id,
+#birthdate {
   width: 100%;
   max-width: 540px;
 }
