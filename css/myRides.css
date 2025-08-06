@@ -144,7 +144,7 @@ nav a {
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
-        /* ← Impide que se baje a la siguiente línea */
+        /* Impide que se baje a la siguiente línea */
         height: 10px;
     }
 
@@ -152,7 +152,6 @@ nav a {
         display: flex;
         flex-direction: row;
         gap: 10px;
-        /* Espacio entre los enlaces */
     }
 
     .nav-right {
@@ -195,4 +194,16 @@ nav a {
         text-decoration: none;
         color: black;
     }
+
+    .box-button {
+        margin-right: 2%;
+    }
+
+    .rides-table th,
+    .rides-table td {
+        padding: 4px;
+    }
 }
+    @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {}
+
+    @media only screen and (min-width: 1650px) and (min-height: 1050px) {}
