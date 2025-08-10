@@ -208,4 +208,45 @@ nav a {
         text-decoration: none;
         color: black;
     }
+
+    .configuration-header>h2 {
+        margin: 10px auto;
+        font-size: 35px;
+    }
+
+    .configuration-body>div:not(.form-actions) {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: auto auto;
+    }
+
+    .configuration-body>div:not(.form-actions)>input {
+        width: 200px;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7%;
+        margin-bottom: 2%;
+        margin-left: 12%;
+        margin-right: 6%;
+    }
+
+    .configuration-section {
+        height: 77%;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
+    .configuration-section {
+        height: 79%;
+    }
+}
+
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {
+    .configuration-section {
+        height: 72%;
+    }
 }
