@@ -204,6 +204,15 @@ nav a {
         padding: 4px;
     }
 }
-    @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {}
 
-    @media only screen and (min-width: 1650px) and (min-height: 1050px) {}
+@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
+    .rides-section {
+        height: 79%;
+    }
+}
+
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {
+    .rides-section {
+        height: 72%;
+    }
+}
