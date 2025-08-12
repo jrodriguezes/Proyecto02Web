@@ -57,7 +57,6 @@ function storeUsers() {
       }
 
       localStorage.setItem("users", JSON.stringify(users));
-      alert("User registration successful!");
       window.location.href = "login.html";
       return true;
     } else {
@@ -87,7 +86,6 @@ function storeUsers() {
       }
 
       localStorage.setItem("users", JSON.stringify(users));
-      alert("Driver registration successful!");
       window.location.href = "login.html";
       return true;
     }

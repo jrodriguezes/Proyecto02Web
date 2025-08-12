@@ -20,7 +20,6 @@ function verifyUser() {
   for (let user of usersList) {
     if (userName === user.userName && password === user.registerPassword) {
       sessionStorage.setItem("activeUser", JSON.stringify(user));
-      alert("Succesfully logged in");
       window.location.href = "myRides.html";
       return true;
     }
