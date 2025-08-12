@@ -20,7 +20,17 @@
 
       <div class="nav-right">
         <input type="text" placeholder="Search..." class="search-input" />
-        <img src="img/user-icon.png" alt="User" class="user-icon" />
+        <div class="user-menu">
+          <label for="toggle-menu">
+            <img src="img/user-icon.png" alt="User" class="user-icon" />
+          </label>
+          <input type="checkbox" id="toggle-menu" />
+          <div class="dropdown-menu">
+            <a onclick="logout()" class="submenu-logout">Logout</a>
+            <a onclick="profileUserType()">Profile</a>
+            <a href="configuration.html">Configuration</a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="configuration-section">
