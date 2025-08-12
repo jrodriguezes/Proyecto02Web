@@ -28,7 +28,7 @@
         <hr />
       </div>
 
-      <div class="form-body">
+      <form class="form-body" id="form-body">
         <div class="column-form">
           <div>
             <label for="first-name">First Name</label>
@@ -74,6 +74,7 @@
               type="text"
               id="address"
               placeholder="1.5km sur parque Santa Rosa Pocosol"
+              readonly
             />
           </div>
         </div>
@@ -139,14 +140,15 @@
           <a href="myRides.html" class="cancel">Cancel</a>
           <button type="submit" class="create-btn">Save</button>
         </div>
-      </div>
+      </form>
     </section>
 
     <hr />
     <nav>
       <a href="searchRides.html">Home</a> | <a href="myRides.html">Rides</a> |
       <a href="bookings.html">Bookings</a> |
-      <a onclick="profileUserType()">Settings</a> | <a href="login.html">Login</a> |
+      <a onclick="profileUserType()">Settings</a> |
+      <a href="login.html">Login</a> |
       <a href="userRegister.html">Register</a>
     </nav>
 
@@ -154,5 +156,6 @@
     <script src="js/rangeBoostrap.js"></script>
     <script src="js/sessionGuard.js"></script>
     <script src="js/globalFunctions.js"></script>
+    <script src="js/userService.js"></script>
   </body>
 </html>
