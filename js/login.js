@@ -18,7 +18,7 @@ function verifyUser() {
   const usersList = JSON.parse(localStorage.getItem("users")) || [];
 
   for (let user of usersList) {
-    if (userName === user.userName && password === user.registerPassword) {
+    if (userName === user.firstName && password === user.registerPassword) {
       sessionStorage.setItem("activeUser", JSON.stringify(user));
       window.location.href = "myRides.html";
       return true;
