@@ -1,14 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("form-body");
-  if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      updateInfo();
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("registration-form");
   if (form) {
     form.addEventListener("submit", function (event) {
@@ -106,6 +96,16 @@ function storeUsers() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form-body");
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      updateInfo();
+    });
+  }
+});
+
 function updateInfo() {
   const activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
   const usersList = JSON.parse(localStorage.getItem("users"));
@@ -168,3 +168,57 @@ function setUserInfo() {
     document.getElementById("plate-number").value = user.plateNumber || "";
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("configuration-form");
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      storeUserBio();
+    });
+  }
+});
+
+function storeUserBio() {
+  const activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
+  const userId = activeUser.userId;
+
+  const userBio = {
+    userId: userId,
+    publicName: document.getElementById("public-name").value,
+    bio: document.getElementById("public-bio").value,
+  };
+
+  let bios = JSON.parse(localStorage.getItem("bios"));
+  if (bios) {
+    bios.push(userBio);
+  } else {
+    bios = [userBio];
+  }
+
+  localStorage.setItem("bios", JSON.stringify(bios));
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("configuration-form");
+  if (form) {
+    setUserBio();
+  }
+});
+
+function setUserBio() {
+  const activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
+  const bios = JSON.parse(localStorage.getItem("bios"));
+
+  if (bios) {
+    for (let userBioInfo of bios) {
+      if (userBioInfo.userId === activeUser.userId) {
+        document.getElementById("public-name").value =
+          userBioInfo.publicName || "";
+        document.getElementById("public-bio").value = userBioInfo.bio || "";
+      }
+    }
+  }
+}
+
+
