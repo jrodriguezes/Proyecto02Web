@@ -194,7 +194,7 @@ function storeUserBio() {
   const index = biosList.findIndex((bio) => bio.userId === userId);
 
   if (index !== -1) {
-    biosList[index] = { ...biosList[index], ...userBio };
+    biosList[index] = { ...userBio };
   } else {
     biosList.push(userBio);
   }
