@@ -189,14 +189,17 @@ function storeUserBio() {
     bio: document.getElementById("public-bio").value,
   };
 
-  let bios = JSON.parse(localStorage.getItem("bios"));
-  if (bios) {
-    bios.push(userBio);
+  let biosList = JSON.parse(localStorage.getItem("bios")) || [];
+
+  const index = biosList.findIndex((bio) => bio.userId === userId);
+
+  if (index !== -1) {
+    biosList[index] = { ...biosList[index], ...userBio };
   } else {
-    bios = [userBio];
+    biosList.push(userBio);
   }
 
-  localStorage.setItem("bios", JSON.stringify(bios));
+  localStorage.setItem("bios", JSON.stringify(biosList));
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -214,11 +217,9 @@ function setUserBio() {
     for (let userBioInfo of bios) {
       if (userBioInfo.userId === activeUser.userId) {
         document.getElementById("public-name").value =
-          userBioInfo.publicName || "";
-        document.getElementById("public-bio").value = userBioInfo.bio || "";
+          userBioInfo.publicName || "eeee";
+        document.getElementById("public-bio").value = userBioInfo.bio || "eee";
       }
     }
   }
 }
-
-
