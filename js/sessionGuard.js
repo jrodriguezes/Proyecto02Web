@@ -12,3 +12,13 @@ function logout() {
   sessionStorage.removeItem("activeUser");
   window.location.href = "login.html";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const activeUser = JSON.parse(sessionStorage.getItem("activeUser"));
+
+  const ridesLink = document.getElementById("rides-link");
+
+  if (activeUser.role === "user" && ridesLink) {
+    ridesLink.style.display = "none"; 
+  }
+});
