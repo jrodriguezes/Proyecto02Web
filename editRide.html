@@ -40,7 +40,7 @@
         <hr />
       </div>
 
-      <div class="edit-ride-main">
+      <form class="edit-ride-main" id="edit-ride-form">
         <div class="form-group-left">
           <div>
             <label for="departure">Departure from</label>
@@ -49,6 +49,7 @@
               id="departure"
               name="departure"
               placeholder="Quesada"
+              id="departure"
             />
           </div>
           <div>
@@ -58,6 +59,7 @@
               id="arrival"
               name="arrival"
               placeholder="Zarcero"
+              id="arrival"
             />
           </div>
         </div>
@@ -66,13 +68,62 @@
           <div><span>Days</span></div>
 
           <div>
-            <label><input type="checkbox" name="days" value="Mon" />Mon</label>
-            <label><input type="checkbox" name="days" value="Tue" />Tue</label>
-            <label><input type="checkbox" name="days" value="Wed" />Wed</label>
-            <label><input type="checkbox" name="days" value="Thu" />Thu</label>
-            <label><input type="checkbox" name="days" value="Fri" />Fri</label>
-            <label><input type="checkbox" name="days" value="Sat" />Sat</label>
-            <label><input type="checkbox" name="days" value="Sun" />Sun</label>
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Mon"
+                id="monday"
+              />Mon</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Tue"
+                id="tuesday"
+              />Tue</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Wed"
+                id="wednesday"
+              />Wed</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Thu"
+                id="thursday"
+              />Thu</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Fri"
+                id="friday"
+              />Fri</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Sat"
+                id="saturday"
+              />Sat</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Sun"
+                id="sunday"
+              />Sun</label
+            >
           </div>
         </div>
 
@@ -80,8 +131,26 @@
           <div>
             <label for="time">Time</label>
             <select id="time" name="time">
+              <option value="6:00 am">6:00 am</option>
+              <option value="7:00 am">7:00 am</option>
+              <option value="8:00 am">8:00 am</option>
+              <option value="9:00 am">9:00 am</option>
               <option value="10:00 am">10:00 am</option>
+              <option value="11:00 am">11:00 am</option>
+              <option value="12:00 am">12:00 am</option>
+              <option value="1:00 pm">1:00 pm</option>
               <option value="2:00 pm">2:00 pm</option>
+              <option value="3:00 pm">3:00 pm</option>
+              <option value="4:00 pm">4:00 pm</option>
+              <option value="5:00 pm">5:00 pm</option>
+              <option value="6:00 pm">6:00 pm</option>
+              <option value="7:00 pm">7:00 pm</option>
+              <option value="8:00 pm">8:00 pm</option>
+              <option value="9:00 pm">9:00 pm</option>
+              <option value="10:00 am">10:00 pm</option>
+              <option value="11:00 pm">11:00 pm</option>
+              <option value="12:00 pm">12:00 pm</option>
+              <option value="1:00 am">1:00 am</option>
             </select>
           </div>
           <div>
@@ -101,6 +170,10 @@
             <select id="make" name="make">
               <option value="Nissan">Nissan</option>
               <option value="Toyota">Toyota</option>
+              <option value="Honda">Honda</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="BMW">BMW</option>
+              <option value="Merdeces-Benz">Merdeces-Benz</option>
             </select>
           </div>
           <div>
@@ -129,7 +202,7 @@
           <a href="myRides.html" class="cancel">Cancel</a>
           <button type="submit" class="create-btn">Save</button>
         </div>
-      </div>
+      </form>
     </section>
 
     <hr />
@@ -143,5 +216,6 @@
     <footer class="footer">© Aventones.com</footer>
     <script src="js/sessionGuard.js"></script>
     <script src="js/globalFunctions.js"></script>
+    <script src="js/ridesService.js"></script>
   </body>
 </html>
