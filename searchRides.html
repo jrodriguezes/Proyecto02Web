@@ -82,7 +82,7 @@
         >Rides found from <span>Ciudad Quesada</span> to
         <span>Santa Rosa de Pocosol</span></span
       >
-      <table class="rides-table">
+      <table class="rides-table" id="rides-table-search-rides">
         <thead>
           <tr>
             <th>Driver</th>
@@ -94,43 +94,8 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td class="foto-perfil">
-              <div><img src="img/user-icon.png" alt="" /></div>
-              <div><p>jrodriguez</p></div>
-            </td>
-            <td><a href="#">Quesada</a></td>
-            <td>Alajuela</td>
-            <td>2</td>
-            <td>Nissan Pathfinder 2015</td>
-            <td>$5</td>
-            <td><a href="rideDetails.html">Request</a></td>
-          </tr>
-          <tr>
-            <td class="foto-perfil">
-              <div><img src="img/user-icon.png" alt="" /></div>
-              <div><p>jrodriguez</p></div>
-            </td>
-            <td><a href="#">Quesada</a></td>
-            <td>Naranjo</td>
-            <td>1</td>
-            <td>Toyota Corolla 2020</td>
-            <td>$10</td>
-            <td><a href="rideDetails.html">Request</a></td>
-          </tr>
-          <tr>
-            <td class="foto-perfil">
-              <div><img src="img/user-icon.png" alt="" /></div>
-              <div><p>yluna</p></div>
-            </td>
-            <td><a href="#">Aguas Zarcas</a></td>
-            <td>Naranjo</td>
-            <td>1</td>
-            <td>Ford Festiva 1990</td>
-            <td>--</td>
-            <td><a href="rideDetails.html">Request</a></td>
-          </tr>
+        <tbody id="search-rides-table">
+
         </tbody>
       </table>
 
@@ -149,5 +114,6 @@
     <footer class="footer">© Aventones.com</footer>
     <script src="js/sessionGuard.js"></script>
     <script src="js/globalFunctions.js"></script>
+    <script src="js/ridesService.js"></script>
   </body>
 </html>
