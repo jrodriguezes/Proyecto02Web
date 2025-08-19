@@ -48,7 +48,7 @@
         </button>
       </div>
 
-      <table class="rides-table">
+      <table class="rides-table" id="rides-table">
         <thead>
           <tr>
             <th>From</th>
@@ -59,31 +59,8 @@
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><a href="rideDetails.html">Quesada</a></td>
-            <td>Alajuela</td>
-            <td>2</td>
-            <td>Nissan Pathfinder 2015</td>
-            <td>$5</td>
-            <td><a href="editRide.html">Edit</a> | <a href="#">Delete</a></td>
-          </tr>
-          <tr>
-            <td><a href="rideDetails.html">Quesada</a></td>
-            <td>Naranjo</td>
-            <td>1</td>
-            <td>Toyota Corolla 2020</td>
-            <td>$10</td>
-            <td><a href="editRide.html">Edit</a> | <a href="#">Delete</a></td>
-          </tr>
-          <tr>
-            <td><a href="rideDetails.html">Aguas Zarcas</a></td>
-            <td>Naranjo</td>
-            <td>1</td>
-            <td>Ford Festiva 1990</td>
-            <td>--</td>
-            <td><a href="editRide.html">Edit</a> | <a href="#">Delete</a></td>
-          </tr>
+        <tbody id="rides-body">
+          
         </tbody>
       </table>
     </section>
@@ -98,5 +75,6 @@
     <footer class="footer">© Aventones.com</footer>
     <script src="js/sessionGuard.js"></script>
     <script src="js/globalFunctions.js"></script>
+    <script src="js/ridesService.js"></script>
   </body>
 </html>
