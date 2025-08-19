@@ -217,8 +217,8 @@ function setUserBio() {
     for (let userBioInfo of bios) {
       if (userBioInfo.userId === activeUser.userId) {
         document.getElementById("public-name").value =
-          userBioInfo.publicName || "eeee";
-        document.getElementById("public-bio").value = userBioInfo.bio || "eee";
+          userBioInfo.publicName || "";
+        document.getElementById("public-bio").value = userBioInfo.bio || "";
       }
     }
   }
