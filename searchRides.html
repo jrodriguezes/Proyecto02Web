@@ -34,7 +34,7 @@
       </div>
     </section>
 
-    <section class="search-rides-section">
+    <form class="search-rides-section" id="search-rides-form">
       <div class="rides-header">
         <h2>Search Rides</h2>
         <hr />
@@ -68,13 +68,13 @@
         <div class="form-group-days">
           <span>Days</span>
           <div>
-            <label><input type="checkbox" name="days" value="Mon" />Mon</label>
-            <label><input type="checkbox" name="days" value="Tue" />Tue</label>
-            <label><input type="checkbox" name="days" value="Wed" />Wed</label>
-            <label><input type="checkbox" name="days" value="Thu" />Thu</label>
-            <label><input type="checkbox" name="days" value="Fri" />Fri</label>
-            <label><input type="checkbox" name="days" value="Sat" />Sat</label>
-            <label><input type="checkbox" name="days" value="Sun" />Sun</label>
+            <label><input type="checkbox" name="days" value="Mon" id="monday"/>Mon</label>
+            <label><input type="checkbox" name="days" value="Tue" id="tuesday"/>Tue</label>
+            <label><input type="checkbox" name="days" value="Wed" id="wednesday"/>Wed</label>
+            <label><input type="checkbox" name="days" value="Thu" id="thursday"/>Thu</label>
+            <label><input type="checkbox" name="days" value="Fri" id="friday"/>Fri</label>
+            <label><input type="checkbox" name="days" value="Sat" id="saturday"/>Sat</label>
+            <label><input type="checkbox" name="days" value="Sun" id="sunday"/>Sun</label>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
       <div class="map-image">
         <img src="img/mapa.png" alt="mapa" />
       </div>
-    </section>
+    </form>
     <hr />
     <nav>
       <a href="searchRides.html">Home</a> | <a href="myRides.html">Rides</a> |
