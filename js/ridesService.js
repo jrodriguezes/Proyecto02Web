@@ -75,11 +75,11 @@ function setUserRides() {
       const row = document.createElement("tr");
 
       row.innerHTML = `
-        <td><a href="rideDetails.html">${ride.departure || ""}</a></td>
+        <td>${ride.departure}</td>
         <td>${ride.arrival}</td>
-        <td>${ride.seats || ""}</td>
-        <td>${ride.make || ""} ${ride.model || ""} ${ride.year || ""}</td>
-        <td>${ride.fee || "--"}${"$"}</td>
+        <td>${ride.seats}</td>
+        <td>${ride.make} ${ride.model} ${ride.year}</td>
+        <td>${ride.fee}${"$"}</td>
         <td>
           <a href="editRide.html?rideId=${ride.rideId}">Edit</a> | 
           <a href="#" onclick="deleteRide('${ride.rideId}')">Delete</a>
@@ -101,53 +101,52 @@ document.addEventListener("DOMContentLoaded", function () {
 function setUserRidesSearchRides() {
   const user = JSON.parse(sessionStorage.getItem("activeUser"));
   const rides = JSON.parse(localStorage.getItem("rides")) || [];
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
   const tbody = document.getElementById("search-rides-table");
   tbody.innerHTML = "";
 
   for (let ride of rides) {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td><img src="img/user-icon.png" style="width:24px; height:24px; vertical-align:middle; border-radius:80%;"> ${
+        ride.userId
+      }</td>
+      <td>${ride.departure}</td>
+      <td>${ride.arrival}</td>
+      <td>${ride.seats}</td>
+      <td>${ride.make} ${ride.model || ""} ${ride.year || ""}</td>
+      <td>${ride.fee}${"$"}</td>
+    `;
+
     if (ride.userId === user.userId) {
-      const row = document.createElement("tr");
+      row.innerHTML += `<td>Your ride</td>`;
+    } else {
+      // revisar si ya hay una solicitud pendiente
+      const existingBooking = bookings.find(
+        (b) => b.rideId === ride.rideId && b.passengerId === user.userId
+      );
 
-      row.innerHTML = `
-        <td><img src="img/user-icon.png" style="width:24px; height:24px; vertical-align:middle; border-radius:80%;"> ${
-          ride.userId
-        }</td>
-        <td><a href="rideDetails.html">${ride.departure || ""}</a></td>
-        <td>${ride.arrival}</td>
-        <td>${ride.seats || ""}</td>
-        <td>${ride.make || ""} ${ride.model || ""} ${ride.year || ""}</td>
-        <td>${ride.fee || "--"}${"$"}</td>
-        <td>Your ride</td>
-      `;
-
-      tbody.appendChild(row);
+      if (existingBooking && existingBooking.accepted === null) {
+        row.innerHTML += `<td>Pending</td>`;
+      } else if (existingBooking && existingBooking.accepted === false) {
+        row.innerHTML += `<td>Reject</td>`;
+      } else if (existingBooking && existingBooking.accepted === true) {
+        row.innerHTML += `<td>Accepted</td>`;
+      } else {
+        row.innerHTML += `<td><a href="rideDetails.html?rideId=${ride.rideId}">Request</a></td>`;
+      }
     }
-    if (ride.userId !== user.userId) {
-      const row = document.createElement("tr");
 
-      row.innerHTML = `
-        <td><img src="img/user-icon.png" style="width:24px; height:24px; vertical-align:middle; border-radius:80%;"> ${
-          ride.userId
-        }</td>
-        <td><a href="rideDetails.html">${ride.departure || ""}</a></td>
-        <td>${ride.arrival}</td>
-        <td>${ride.seats || ""}</td>
-        <td>${ride.make || ""} ${ride.model || ""} ${ride.year || ""}</td>
-        <td>${ride.fee || "--"}${"$"}</td>
-        <td>
-          <a href="#">Request</a>
-        </td>
-      `;
-
-      tbody.appendChild(row);
-    }
+    tbody.appendChild(row);
   }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("edit-ride-form");
-  if (form) {
+  const form2 = document.getElementById("ride-details-form");
+  if (form || form2) {
     setUserRidesEdit();
   }
 });
