@@ -36,7 +36,7 @@
         </div>
       </div>
     </section>
-    <section class="bookings-section">
+    <form class="bookings-section" id="bookings-form">
       <div class="booking-header">
         <h2>Bookings</h2>
         <hr />
@@ -50,26 +50,9 @@
             <th>Accept/Reject</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td class="foto-perfil">
-              <img src="img/user-icon.png" alt="" />
-              <p>Fulano</p>
-            </td>
-            <td>Ciudad Quesada - Naranjo</td>
-            <td><a href="">Accept</a> | <a href="">Reject</a></td>
-          </tr>
-          <tr>
-            <td class="foto-perfil">
-              <img src="img/user-icon.png" alt="" />
-              <p>yluna</p>
-            </td>
-            <td>Fortuna - San José</td>
-            <td><a href="">Accept</a> | <a href="">Reject</a></td>
-          </tr>
-        </tbody>
+        <tbody id="tbody-booking"></tbody>
       </table>
-    </section>
+    </form>
 
     <hr />
     <nav>
@@ -82,5 +65,6 @@
     <footer class="footer">© Aventones.com</footer>
     <script src="js/sessionGuard.js"></script>
     <script src="js/globalFunctions.js"></script>
+    <script src="js/bookingService.js"></script>
   </body>
 </html>
