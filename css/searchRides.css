@@ -231,6 +231,10 @@ nav a {
     white-space: nowrap
 }
 
+.ride-id {
+    display: none;
+}
+
 @media only screen and (min-width: 390px) and (max-width: 1023px) and (min-height: 844px) and (max-height: 1365px) {
     .navbar {
         margin: 0 auto;
