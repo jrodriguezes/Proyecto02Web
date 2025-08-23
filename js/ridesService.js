@@ -92,58 +92,6 @@ function setUserRides() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const table = document.getElementById("rides-table-search-rides");
-  if (table) {
-    setUserRidesSearchRides();
-  }
-});
-
-function setUserRidesSearchRides() {
-  const user = JSON.parse(sessionStorage.getItem("activeUser"));
-  const rides = JSON.parse(localStorage.getItem("rides")) || [];
-  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
-
-  const tbody = document.getElementById("search-rides-table");
-  tbody.innerHTML = "";
-
-  for (let ride of rides) {
-    const row = document.createElement("tr");
-
-    row.innerHTML = `
-      <td><img src="img/user-icon.png" style="width:24px; height:24px; vertical-align:middle; border-radius:80%;"> ${
-        ride.userId
-      }</td>
-      <td>${ride.departure}</td>
-      <td>${ride.arrival}</td>
-      <td>${ride.seats}</td>
-      <td>${ride.make} ${ride.model || ""} ${ride.year || ""}</td>
-      <td>${ride.fee}${"$"}</td>
-    `;
-
-    if (ride.userId === user.userId) {
-      row.innerHTML += `<td>Your ride</td>`;
-    } else {
-      // revisar si ya hay una solicitud pendiente
-      const existingBooking = bookings.find(
-        (b) => b.rideId === ride.rideId && b.passengerId === user.userId
-      );
-
-      if (existingBooking && existingBooking.accepted === null) {
-        row.innerHTML += `<td>Pending</td>`;
-      } else if (existingBooking && existingBooking.accepted === false) {
-        row.innerHTML += `<td>Reject</td>`;
-      } else if (existingBooking && existingBooking.accepted === true) {
-        row.innerHTML += `<td>Accepted</td>`;
-      } else {
-        row.innerHTML += `<td><a href="rideDetails.html?rideId=${ride.rideId}">Request</a></td>`;
-      }
-    }
-
-    tbody.appendChild(row);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("edit-ride-form");
   const form2 = document.getElementById("ride-details-form");
   if (form || form2) {
@@ -247,4 +195,91 @@ function storeEditedRides() {
       }
     }
   }
+}
+
+function deleteRide(rideId) {}
+
+function setUserRidesSearchRides(matchedRides) {
+  const user = JSON.parse(sessionStorage.getItem("activeUser"));
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+  const tbody = document.getElementById("search-rides-table");
+  tbody.innerHTML = "";
+
+  for (let ride of matchedRides) {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td><img src="img/user-icon.png" style="width:24px; height:24px; vertical-align:middle; border-radius:80%;"> ${
+        ride.userId
+      }</td>
+      <td>${ride.departure}</td>
+      <td>${ride.arrival}</td>
+      <td>${ride.seats}</td>
+      <td>${ride.make} ${ride.model || ""} ${ride.year || ""}</td>
+      <td>$${ride.fee}</td>
+    `;
+
+    if (ride.userId === user.userId) {
+      row.innerHTML += `<td>Your ride</td>`;
+    } else {
+      const existingBooking = bookings.find(
+        (b) => b.rideId === ride.rideId && b.passengerId === user.userId
+      );
+
+      if (existingBooking && existingBooking.accepted === null) {
+        row.innerHTML += `<td>Pending</td>`;
+      } else if (existingBooking && existingBooking.accepted === false) {
+        row.innerHTML += `<td>Reject</td>`;
+      } else if (existingBooking && existingBooking.accepted === true) {
+        row.innerHTML += `<td>Accepted</td>`;
+      } else {
+        row.innerHTML += `<td><a href="rideDetails.html?rideId=${ride.rideId}">Request</a></td>`;
+      }
+    }
+
+    tbody.appendChild(row);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("search-rides-form");
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      searchRidesAlgorithm();
+    });
+  }
+});
+
+function searchRidesAlgorithm() {
+  const rides = JSON.parse(localStorage.getItem("rides")) || [];
+
+  const departure = document.getElementById("from").value;
+  const arrival = document.getElementById("to").value;
+  const selectedDays = getSelectedDays();
+
+  const matchedRides = rides.filter((ride) => {
+    const sameRoute = ride.departure === departure && ride.arrival === arrival;
+
+    const matchingDays = ride.days.some((day, i) => day && selectedDays[i]);
+
+    return sameRoute && matchingDays;
+  });
+
+  setUserRidesSearchRides(matchedRides);
+}
+
+function getSelectedDays() {
+  const dayIds = [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "sunday",
+  ];
+
+  return dayIds.map((id) => document.getElementById(id).checked);
 }
