@@ -33,7 +33,7 @@
         </div>
       </div>
     </section>
-    <section class="ride-details-section">
+    <form class="ride-details-section" id="ride-details-form">
       <div class="ride-details-header">
         <h2>Ride Details</h2>
         <hr />
@@ -41,19 +41,19 @@
 
       <div class="user-profile">
         <img src="img/user-icon.png" alt="imagen-usuario" />
-        <h3>jrodriguezes02</h3>
+        <input id="username" readonly />
       </div>
 
       <div class="ride-details-body">
         <div class="departure-arrive-wrapper">
           <div class="departure-arrive-information">
             <h4>Departure from</h4>
-            <span>Quesada</span>
+            <input id="departure" readonly />
           </div>
 
           <div class="departure-arrive-information">
             <h4>Arrive to</h4>
-            <span>Zarcero</span>
+            <input id="arrival" readonly />
           </div>
         </div>
 
@@ -61,41 +61,133 @@
           <div><span>Days</span></div>
 
           <div>
-            <label><input type="checkbox" name="days" value="Mon" />Mon</label>
-            <label><input type="checkbox" name="days" value="Tue" />Tue</label>
-            <label><input type="checkbox" name="days" value="Wed" />Wed</label>
-            <label><input type="checkbox" name="days" value="Thu" />Thu</label>
-            <label><input type="checkbox" name="days" value="Fri" />Fri</label>
-            <label><input type="checkbox" name="days" value="Sat" />Sat</label>
-            <label><input type="checkbox" name="days" value="Sun" />Sun</label>
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Mon"
+                id="monday"
+                disabled
+              />Mon</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Tue"
+                id="tuesday"
+                disabled
+              />Tue</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Wed"
+                id="wednesday"
+                disabled
+              />Wed</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Thu"
+                id="thursday"
+                disabled
+              />Thu</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Fri"
+                id="friday"
+                disabled
+              />Fri</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Sat"
+                id="saturday"
+                disabled
+              />Sat</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="days"
+                value="Sun"
+                id="sunday"
+                disabled
+              />Sun</label
+            >
           </div>
         </div>
 
         <div class="form-group-inline">
           <div>
             <label for="time">Time</label>
-            <select id="time" name="time">
+            <select id="time" name="time" disabled>
+              <option value="6:00 am">6:00 am</option>
+              <option value="7:00 am">7:00 am</option>
+              <option value="8:00 am">8:00 am</option>
+              <option value="9:00 am">9:00 am</option>
               <option value="10:00 am">10:00 am</option>
+              <option value="11:00 am">11:00 am</option>
+              <option value="12:00 am">12:00 am</option>
+              <option value="1:00 pm">1:00 pm</option>
               <option value="2:00 pm">2:00 pm</option>
+              <option value="3:00 pm">3:00 pm</option>
+              <option value="4:00 pm">4:00 pm</option>
+              <option value="5:00 pm">5:00 pm</option>
+              <option value="6:00 pm">6:00 pm</option>
+              <option value="7:00 pm">7:00 pm</option>
+              <option value="8:00 pm">8:00 pm</option>
+              <option value="9:00 pm">9:00 pm</option>
+              <option value="10:00 am">10:00 pm</option>
+              <option value="11:00 pm">11:00 pm</option>
+              <option value="12:00 pm">12:00 pm</option>
+              <option value="1:00 am">1:00 am</option>
             </select>
           </div>
           <div>
             <label for="seats">Seats</label>
-            <input type="number" id="seats" name="seats" value="2" min="1" />
+            <input
+              type="number"
+              id="seats"
+              name="seats"
+              value="2"
+              min="1"
+              readonly
+            />
           </div>
 
           <div>
             <label for="fee">Fee</label>
-            <input type="number" id="fee" name="fee" value="15" min="0" />
+            <input
+              type="number"
+              id="fee"
+              name="fee"
+              value="15"
+              min="0"
+              readonly
+            />
           </div>
         </div>
         <p class="vehicle-details-title">Vehicle Details</p>
         <div class="vehicle-details">
           <div>
             <label for="make">Make</label>
-            <select id="make" name="make">
+            <select id="make" name="make" disabled>
               <option value="Nissan">Nissan</option>
               <option value="Toyota">Toyota</option>
+              <option value="Honda">Honda</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="BMW">BMW</option>
+              <option value="Merdeces-Benz">Merdeces-Benz</option>
             </select>
           </div>
           <div>
@@ -105,6 +197,7 @@
               id="model"
               name="model"
               placeholder="Car Model"
+              readonly
             />
           </div>
 
@@ -116,6 +209,7 @@
               name="year"
               value="2020"
               min="1900"
+              readonly
             />
           </div>
         </div>
@@ -125,7 +219,7 @@
           <button type="submit" class="create-btn">Request</button>
         </div>
       </div>
-    </section>
+    </form>
 
     <hr />
     <nav>
@@ -138,5 +232,7 @@
     <footer class="footer">© Aventones.com</footer>
     <script src="js/sessionGuard.js"></script>
     <script src="js/globalFunctions.js"></script>
+    <script src="js/ridesService.js"></script>
+    <script src="js/bookingService.js"></script>
   </body>
 </html>
