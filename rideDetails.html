@@ -47,13 +47,24 @@
       <div class="ride-details-body">
         <div class="departure-arrive-wrapper">
           <div class="departure-arrive-information">
-            <h4>Departure from</h4>
-            <input id="departure" readonly />
+            <label for="departure">Departure from</label>
+            <select id="departure" name="from" class="places" disabled>
+              <option value="ciudad-quesada">Ciudad Quesada</option>
+              <option value="santa-rosa-pocosol">Santa Rosa de Pocosol</option>
+              <option value="aguas-zarcas">Aguas Zarcas</option>
+              <option value="puntarenas">Puntarenas</option>
+              <option value="santa-clara">Santa Clara</option>
+            </select>
           </div>
-
           <div class="departure-arrive-information">
-            <h4>Arrive to</h4>
-            <input id="arrival" readonly />
+            <label for="arrival">Departure from</label>
+            <select id="arrival" name="from" class="places" disabled>
+              <option value="ciudad-quesada">Ciudad Quesada</option>
+              <option value="santa-rosa-pocosol">Santa Rosa de Pocosol</option>
+              <option value="aguas-zarcas">Aguas Zarcas</option>
+              <option value="puntarenas">Puntarenas</option>
+              <option value="santa-clara">Santa Clara</option>
+            </select>
           </div>
         </div>
 
@@ -215,7 +226,7 @@
         </div>
 
         <div class="form-actions">
-          <a href="myRides.html" class="cancel">Cancel</a>
+          <a href="searchRides.html" class="cancel">Cancel</a>
           <button type="submit" class="create-btn">Request</button>
         </div>
       </div>
