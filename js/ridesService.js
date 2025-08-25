@@ -82,7 +82,7 @@ function setUserRides() {
         <td>${ride.fee}${"$"}</td>
         <td>
           <a href="editRide.html?rideId=${ride.rideId}">Edit</a> | 
-          <a href="#" onclick="deleteRide('${ride.rideId}')">Delete</a>
+          <a href="myRides.html" onclick="deleteRide('${ride.rideId}')">Delete</a>
         </td>
       `;
 
@@ -90,6 +90,19 @@ function setUserRides() {
     }
   }
 }
+
+function deleteRide(rideId) {
+  let rides = JSON.parse(localStorage.getItem("rides")) || [];
+  let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+  rides = rides.filter(ride => ride.rideId !== rideId);
+
+  bookings = bookings.filter(booking => booking.rideId !== rideId);
+
+  localStorage.setItem("rides", JSON.stringify(rides));
+  localStorage.setItem("bookings", JSON.stringify(bookings));
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("edit-ride-form");
@@ -196,8 +209,6 @@ function storeEditedRides() {
     }
   }
 }
-
-function deleteRide(rideId) {}
 
 function setUserRidesSearchRides(matchedRides) {
   const user = JSON.parse(sessionStorage.getItem("activeUser"));
