@@ -165,16 +165,16 @@ nav a {
 
 .departure-arrive-wrapper {
     display: flex;
-    gap: 40px;
-    margin: 20px 0;
+    gap: 41px;
+    margin: 30px 0;
 }
 
 .departure-arrive-information {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    padding: 0px 60px;
+    gap: 5px;
+    font-size: 18px;
+    padding: 0px 3px;
 }
 
 .departure-arrive-information span {
@@ -188,6 +188,12 @@ nav a {
 .form-group-days>div {
     padding-bottom: 10px;
 }
+
+#username {
+    margin: 5px auto;
+    text-align: center;
+}
+
 
 .form-group-days>div>label {
     padding: 0px 19px;
@@ -300,6 +306,81 @@ nav a {
 }
 
 @media only screen and (min-width: 390px) and (max-width: 1023px) and (min-height: 844px) and (max-height: 1365px) {
+
+    .form-actions>a {
+        margin-left: 16px;
+    }
+
+    .form-actions>button {
+        margin: auto 13px;
+    }
+
+    .form-actions {
+        margin: auto 15px;
+
+        padding: 70px 0px;
+    }
+
+    #model,
+    #year,
+    #make {
+        width: 100px;
+    }
+
+    .vehicle-details {
+        justify-content: unset;
+        padding: 30px 19px;
+        margin: auto 15px;
+    }
+
+    .vehicle-details>div {
+        display: flex;
+        flex-direction: column;
+        max-width: 115px;
+        padding: 1px 1px;
+        margin: auto auto;
+    }
+
+    .vehicle-details-title {
+        margin-bottom: 0px;
+        margin-right: 69%;
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+
+    .form-group-inline>div {
+        padding: 0px 4.4px;
+    }
+
+    .form-group-days>div>label {
+        padding: 0px 1px;
+    }
+
+    .ride-details-body {
+        width: 390px;
+    }
+
+    .departure-arrive-wrapper {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    .departure-arrive-information {
+        flex-direction: column;
+        gap: 0px;
+        margin: 10px 0;
+        flex-wrap: nowrap;
+    }
+
+    #departure,
+    #arrival {
+        font-size: 14px;
+        padding: 5px 95.5px;
+        text-align: center;
+    }
+
     .navbar {
         margin: 0 auto;
         display: flex;
@@ -357,5 +438,24 @@ nav a {
         margin: 0px 2px;
         text-decoration: none;
         color: black;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
+    .vehicle-details>div {
+        display: flex;
+        gap: 2%;
+        max-width: 240px;
+        padding: 1px 7px;
+    }
+
+    .vehicle-details-title {
+        margin-bottom: 5px;
+        margin-right: 83%;
+        margin-top: 34px;
+    }
+
+    .form-actions {
+        margin-top: 11px;
     }
 }

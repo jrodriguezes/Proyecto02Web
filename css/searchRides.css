@@ -196,7 +196,7 @@ nav a {
     margin: auto 5%;
 }
 
-.search-rides-section>span>span {
+.search-rides-section>div>span>span {
     font-weight: bold;
 }
 
@@ -236,6 +236,10 @@ nav a {
 }
 
 @media only screen and (min-width: 390px) and (max-width: 1023px) and (min-height: 844px) and (max-height: 1365px) {
+    .span-container {
+        margin: auto 5px;
+    }
+
     .navbar {
         margin: 0 auto;
         display: flex;
@@ -332,6 +336,10 @@ nav a {
         font-size: 14px;
     }
 
+    .rides-table th {
+        padding: 4px 5px;
+    }
+
     .foto-perfil {
         display: block;
         align-items: center;
@@ -360,7 +368,7 @@ nav a {
     }
 
     .map-image {
-        margin: 1% 2%;
+        margin: 1% 1%;
         height: 150px;
     }
 
@@ -376,7 +384,7 @@ nav a {
 
 @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
     .search-rides-section {
-        height: 79%;
+        height: 45%;
     }
 
     .map-image {
@@ -385,10 +393,30 @@ nav a {
     }
 
     .map-image>img {
-        height: 570px;
+        height: 250px;
         align-items: center;
         text-align: center;
     }
+
+    .span-container {
+        margin: auto 50px;
+    }
+
+
+
 }
 
-@media only screen and (min-width: 1650px) and (min-height: 1050px) {}
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {
+    .map-image {
+        margin: 1% 5%;
+        height: 200px;
+    }
+
+    .map-image>img {
+        height: 170px;
+    }
+
+    .span-container {
+        margin: auto 82px;
+    }
+}

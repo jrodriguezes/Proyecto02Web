@@ -284,12 +284,20 @@ nav a {
 
 @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
     .configuration-section {
-        height: 79%;
+        height: 45%;
+    }
+
+    .configuration-body {
+        min-height: 33vh;
     }
 }
 
 @media only screen and (min-width: 1650px) and (min-height: 1050px) {
     .configuration-section {
-        height: 72%;
+        height: 58%;
+    }
+
+    .configuration-body {
+        min-height: 33vh;
     }
 }

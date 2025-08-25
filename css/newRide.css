@@ -395,7 +395,7 @@ nav a {
     }
 
     .vehicle-details>div {
-        max-width: 125px;
+        max-width: 115px;
         padding: 1px 1px;
         margin: auto auto;
     }
@@ -417,12 +417,20 @@ nav a {
 
 @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
     .new-ride-section {
-        height: 79%;
+        height: 45%;
+    }
+
+    .form-actions {
+        padding: 30px 1px;
     }
 }
 
 @media only screen and (min-width: 1650px) and (min-height: 1050px) {
-    .new-ride-section {
-        height: 72%;
+    .edit-ride-section {
+        height: 58%;
+    }
+
+    .form-actions {
+        padding: 20px 1px;
     }
 }

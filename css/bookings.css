@@ -279,3 +279,15 @@ nav a {
         color: black;
     }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
+    .bookings-section {
+        height: 43.6%;
+    }
+}
+
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {
+    .bookings-section {
+        height: 56%;
+    }
+}

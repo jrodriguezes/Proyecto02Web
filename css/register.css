@@ -201,10 +201,56 @@ nav a {
 
 @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
 
-
   .page-container {
-    height: 93%;
+    height: 59%;
   }
+
+  .header {
+    margin: 1% 1px;
+    margin-bottom: 2%;
+  }
+
+  .registration-body {
+    margin-top: 5px;
+    gap: 5px;
+  }
+
+  .cta-buttons-relinks {
+    margin: 0% auto;
+  }
+
+  .cta-buttons-sign-up {
+    margin: 1% auto;
+    text-align: center;
+  }
+
 }
 
-@media only screen and (min-width: 1650px) and (min-height: 1050px) {}
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {
+  .header {
+    margin: 1% 1px;
+    margin-bottom: 1%;
+  }
+
+  .registration-body {
+    margin-top: 5px;
+    gap: 5px;
+  }
+
+  .cta-buttons-relinks {
+    margin: 0% auto;
+  }
+
+  .cta-buttons-sign-up {
+    margin: 1% auto;
+    text-align: center;
+  }
+
+  .cta-buttons-relinks p {
+    margin: 0px 0;
+    font-size: 0.9rem;
+    align-items: center;
+    display: inline-block;
+    padding: 13px;
+  }
+}
