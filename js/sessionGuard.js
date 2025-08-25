@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "login.html";
     return;
   }
+  const noAllowedPages = ["myRides.html"];
+  const currentPage = window.location.pathname.split("/").pop();
+  
+  if (noAllowedPages.includes(currentPage) && user.role !== "driver") {
+    alert("You must be driver in to access this page.");
+    window.location.href = "searchRides.html";
+    return;
+  }
 });
 
 function logout() {
@@ -19,6 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const ridesLink = document.getElementById("rides-link");
 
   if (activeUser.role === "user" && ridesLink) {
-    ridesLink.style.display = "none"; 
+    ridesLink.style.display = "none";
   }
 });
