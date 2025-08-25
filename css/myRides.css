@@ -6,6 +6,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+:root {
+    --primary-color: #4285F4;
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -138,7 +142,7 @@ body {
 }
 
 .new-ride-button {
-    background-color: #4285F4;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px 40px;
     margin: 10px 0px;

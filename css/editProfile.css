@@ -34,6 +34,10 @@ body {
     margin-bottom: 4%;
 }
 
+:root {
+    --primary-color: #4285F4;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -61,7 +65,7 @@ body {
 }
 
 .nav-link.active {
-    background-color: #4285F4;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -185,7 +189,7 @@ input {
 .form-actions>button {
     border: 1px solid #555;
     padding: 10px 80px;
-    background-color: #4285F4;
+    background-color: var(--primary-color);
     color: white;
 }
 
