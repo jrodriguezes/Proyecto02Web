@@ -458,4 +458,22 @@ nav a {
     .form-actions {
         margin-top: 11px;
     }
+
+    .ride-details-section {
+        height: 50%;
+    }
+}
+
+@media only screen and (min-width: 1650px) and (min-height: 1050px) {
+    .vehicle-details>div {
+        padding: 1px 8px;
+    }
+
+    .vehicle-details {
+        padding: 37px 1px
+    }
+
+    .form-actions {
+        margin-top: 3px;
+    }
 }

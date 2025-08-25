@@ -384,7 +384,7 @@ nav a {
 
 @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
     .search-rides-section {
-        height: 45%;
+        height: 50%;
     }
 
     .map-image {
@@ -401,9 +401,6 @@ nav a {
     .span-container {
         margin: auto 50px;
     }
-
-
-
 }
 
 @media only screen and (min-width: 1650px) and (min-height: 1050px) {
@@ -418,5 +415,9 @@ nav a {
 
     .span-container {
         margin: auto 82px;
+    }
+
+    .search-rides-section {
+        height: 58%;
     }
 }

@@ -284,7 +284,7 @@ nav a {
 
 @media only screen and (min-width: 1024px) and (max-width: 1649px) and (min-height: 1366px) {
     .configuration-section {
-        height: 45%;
+        height: 50%;
     }
 
     .configuration-body {
